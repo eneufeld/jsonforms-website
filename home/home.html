@@ -1,0 +1,82 @@
+
+<div layout="column" layout-align="start center">
+    <div layout-align="center center" layout="column" class="jsonforms">
+        <div class="mainLogo">More Forms. Less Code.</div>
+        <div><md-button class="md-raised md-primary" ng-href="docs/quickstart">Get Started</md-button><md-button class="md-raised md-primary" ng-href="#demo">Demo</md-button></div>
+    </div>
+    <div layout="column" flex="noshrink" style="max-width:1200px" layout-fill>
+        <div layout-padding layout-margin layout-align="space-around top" layout-gt-sm="row">
+            <div flex layout="row" class="card">
+                <div layout="column" layout-align="start center" flex="grow">
+                    <h2>Declarative.</h2>
+                    <p>
+                        Declare your forms as JSON with great tooling.
+                    </p>
+                </div>
+                <md-icon md-svg-icon="puzzle" class="lg-media"></md-icon><!--eg puzzle -->
+            </div>
+            <div flex layout="row" class="card">
+                <div layout="column" layout-align="start center" flex="grow">
+                    <h2>Ready-to-use.</h2>
+                    <p>
+                        Fully-featured forms including databinding, input validation and rule-based visibility out-of-the-box.
+                    </p>
+                </div>
+                <md-icon md-svg-icon="gift" class="lg-media"></md-icon><!--eg geschenkbox / offene schachtel -->
+            </div>
+            <div flex layout="row" class="card">
+                <div layout="column" layout-align="start center" flex="grow">
+                    <h2>Customizable.</h2>
+                    <p>
+                        Designed for customizability from custom styling to custom widgets.
+                    </p>
+                </div>
+                <md-icon md-svg-icon="screwdriver" class="lg-media"></md-icon><!--eg schraubenzieher und schraubenschlüssel  / werkzeug -->
+            </div>
+        </div>
+        <div layout="column" layout-align="start stretch" class="md-padding" layout-fill>
+            <h2 id="demo" style="text-align:center">Live Example</h2>
+            <div layout="row">
+                <div layout="column" flex layout-margin>
+                    <h3 class="text-center" style="font-size: 20px; font-weight:bold">JSON Schema</h3>
+                    <div ui-ace="{onLoad: aceLoaded}" ng-model="localModel" id="localModelEditor" flex="grow"></div>
+                </div>
+                <div layout="column" flex layout-margin>
+                    <h3 class="text-center" style="font-size: 20px; font-weight:bold">UI Schema</h3>
+                    <div ui-ace="{onLoad: aceLoaded}" ng-model="localView" id="localViewEditor" flex="grow"></div>
+                </div>
+            </div>
+
+            <div layout="column" layout-align="center center" layout-fill>
+                <div class="text-center">
+                    <md-button class="md-raised md-primary" ng-click="reparse()">Render view</button>
+                </div>
+            </div>
+            <div layout="column" layout-align="center center" layout-fill>
+                <div class="panel-body jsf" style="line-height: 1.0">
+                  <jsonforms schema="localModelObject" ui-schema="localViewObject" data="staticDataProvider.data"/>
+                </div>
+            </div>
+            <div layout="column" layout-align="center center" layout-fill>
+                <md-button class="md-raised md-primary" ng-href="localdemo">Try it out now!</md-button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+<md-content layout="row">
+    <md-content layout="column" flex class="md-padding">
+        <md-content layout="column" flex class="additional">
+            <p class="text-center" style="color: palevioletred">
+                Looking for the EMF Forms integration guide? <a href="https://github.com/eclipsesource/jsonforms/wiki/EMF-Forms-Integration-Guide">Click here</a>
+            </p>
+            <p class="text-center" style="color: #e74c3c">
+                If you like what you see, <a href="mailto:info@jsonforms.org">get in touch with us</a>!
+                You can participate by contributing enhancements, requesting features or reporting bugs via <a href="https://github.com/eclipsesource/jsonforms/issues">the issue tracker</a>!
+                If you want to get in contact with us, <a href="mailto:info@jsonforms.org">drop us a mail at info@jsonforms.org</a>.
+            </p>
+        </md-content>
+    </md-content>
+
+</md-content>
+-->

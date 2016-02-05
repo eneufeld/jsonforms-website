@@ -1,0 +1,19 @@
+<div layout="column" flex="grow">
+    <h1 style="text-align:center"><strong>Demo:</strong></h1>
+    <div layout="row" flex="grow" class="md-padding">
+        <div layout="column" flex="grow" class="md-padding">
+            <label for="localModelEditor">JSON Schema:</label>
+            <div ui-ace="{onLoad: aceLoaded}" ng-model="localModel" id="localModelEditor" flex="grow"></div>
+        </div>
+        <div layout="column" flex="grow" class="md-padding">
+            <label for="localViewEditor">View:</label>
+            <div ui-ace="{onLoad: aceLoaded}" ng-model="localView" id="localViewEditor" flex="grow"></div>
+        </div>
+    </div>
+    <div layout="row" flex layout-align="center center">
+        <md-button class="md-raised md-primary" ng-click="reparse()">Render view</button>
+    </div>
+    <div layout="row" flex="grow" layout-align="center center" class="jsf">
+        <jsonforms schema="localModelObject" ui-schema="localViewObject" data="dynamicDataProvider.data"/>
+    </div>
+</div>
