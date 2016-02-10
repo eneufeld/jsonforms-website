@@ -71,7 +71,7 @@
                 <p>
                 This repository contains a basic JSONForms project template to get you started. It contains an index.html as well as an app.js file containing the application logic. The index.html specifies all relevant dependencies as well as some boilerplate HTML. To retrieve all dependencies we’ll use Bower. If you don’t have Bower yet installed (or never heard of it) please <a href="http://bower.io/#install-bower">follow these instructions</a>. Then, navigate to the cloned repository and execute the following command from with your shell:
 
-                <pre><code>bower install</code></pre>
+                <div ui-ace="appCtrl.configAce('sh')" readonly flex="noshrink" style="height:16px;">bower install</div>
 
                 This will install all relevant dependencies.
                 </p>
@@ -79,54 +79,53 @@
                 Now open the js/app.js file. You’ll see that the file already contains a predefined controller called MyController. The controller gets injected the SchemaService and the UISchemaService which provide the JSON Schema and the UI Schema respectively. In this example we’ll use a stripped-down version of the schema we outlined last time, where a user has only four properties: name, age, gender and birth date.
                 We also provide a ready-to-use UI Schema, which consists of three controls ordered in a horizontal fashion. Let’s change this layout to feature an additional control and layout the controls side-by-side. Below is given the complete code to do so.
                 </p>
-                <pre><code>
-                app.service('UISchemaService', function () {
-                   this.uiSchema = {
-                       "type": "HorizontalLayout",
-                       "elements": [
-                           {
-                               "type": "VerticalLayout",
-                               "elements": [
-                                   {
-                                       "type": "Control",
-                                       "label": "Name",
-                                       "scope": {
-                                           "$ref": "#/properties/name"
-                                       }
-                                   },
-                                   {
-                                       "type": "Control",
-                                       "label": "Age",
-                                       "scope": {
-                                           "$ref": "#/properties/age"
-                                       }
-                                   }
-                               ]
-                           },
-                           {
-                               "type": "VerticalLayout",
-                               "elements": [
-                                   {
-                                       "type": "Control",
-                                       "label": "Height",
-                                       "scope": {
-                                           "$ref": "#/properties/height"
-                                       }
-                                   },
-                                   {
-                                       "type": "Control",
-                                       "label": "Gender",
-                                       "scope": {
-                                           "$ref": "#/properties/gender"
-                                       }
-                                   }
-                               ]
-                           }
-                       ]
-                   };
-                });
-                </code></pre>
-
+                <div ui-ace="appCtrl.configAce('javascript')" readonly flex="noshrink">
+app.service('UISchemaService', function () {
+   this.uiSchema = {
+       "type": "HorizontalLayout",
+       "elements": [
+           {
+               "type": "VerticalLayout",
+               "elements": [
+                   {
+                       "type": "Control",
+                       "label": "Name",
+                       "scope": {
+                           "$ref": "#/properties/name"
+                       }
+                   },
+                   {
+                       "type": "Control",
+                       "label": "Age",
+                       "scope": {
+                           "$ref": "#/properties/age"
+                       }
+                   }
+               ]
+           },
+           {
+               "type": "VerticalLayout",
+               "elements": [
+                   {
+                       "type": "Control",
+                       "label": "Height",
+                       "scope": {
+                           "$ref": "#/properties/height"
+                       }
+                   },
+                   {
+                       "type": "Control",
+                       "label": "Gender",
+                       "scope": {
+                           "$ref": "#/properties/gender"
+                       }
+                   }
+               ]
+           }
+       ]
+   };
+});
+                </div>
                 <p>
                 Writing schemas by hand shouldn’t happen very often, since we will provide tooling for creating UI schemas, but it is beneficial to know that the UI schemas are just regular JSON.
                 </p>

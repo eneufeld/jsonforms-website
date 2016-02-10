@@ -10,6 +10,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:700,400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css"/>
     <link rel="stylesheet" href="css/main.css"/>
 
@@ -96,11 +98,11 @@
                     <div layout="row">
                         <div layout="column" flex layout-margin>
                             <h3 class="text-center" style="font-size: 20px; font-weight:bold">JSON Schema</h3>
-                            <div ui-ace="{onLoad: appCtrl.aceLoaded}" ng-model="appCtrl.localStaticModel" id="localStaticModelEditor" flex="grow"></div>
+                            <div ui-ace="appCtrl.configAce('json')" ng-model="appCtrl.localStaticModel" id="localStaticModelEditor" flex="grow"></div>
                         </div>
                         <div layout="column" flex layout-margin>
                             <h3 class="text-center" style="font-size: 20px; font-weight:bold">UI Schema</h3>
-                            <div ui-ace="{onLoad: appCtrl.aceLoaded}" ng-model="appCtrl.localStaticView" id="localStaticViewEditor" flex="grow"></div>
+                            <div ui-ace="appCtrl.configAce('json')" ng-model="appCtrl.localStaticView" id="localStaticViewEditor" flex="grow"></div>
                         </div>
                     </div>
 

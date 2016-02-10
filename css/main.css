@@ -40,14 +40,12 @@
 .icon-arrow-drop-down:before {
 	content: "\25bc";
 }
-.jsonforms .md-button {
-    font-weight: bold;
-}
+
 fieldset{
     border-style:none;
 }
 body{
-    font-family: sans-serif;
+    font-family: 'Merriweather',serif;
 }
 .main-nav{
     line-height: 80px;
@@ -70,6 +68,7 @@ button.main-nav-button{
 .innerlogo{
     padding-left: 110px;
     position: relative;
+    font-family: 'Roboto',sans-serif;
 }
 .innerlogo:after{
     background-image: url("../images/jsonforms-logo-white.png");
@@ -147,6 +146,9 @@ button.main-nav-button{
     height: 400px;
     width: 100%;
 }
+.jsonforms .md-button {
+    font-weight: 700;
+}
 .mainLogo{
     width:640px;
     padding-top: 125px;
@@ -155,6 +157,7 @@ button.main-nav-button{
     position: relative;
     font-size: 40px;
     font-weight: bold;
+    font-family: 'Roboto',sans-serif;
 }
 .mainLogo:after{
     background-image: url("../images/jsonforms-logo.png");

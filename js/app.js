@@ -125,14 +125,19 @@ app.controller('AppCtrl',['StaticData','DynamicData', function(StaticData,Dynami
 
     vm.staticDataProvider=StaticData;
     vm.dynamicDataProvider=DynamicData;
-    vm.aceLoaded = function(editor) {
-        editor.$blockScrolling = Infinity;
-        editor.getSession().setMode("ace/mode/javascript");
-        editor.setOptions({
-            enableSnippets: true,
-            enableBasicAutocompletion: true,
-            enableLiveAutocompletion: true
-        });
+    vm.configAce = function(mode) {
+        return {
+            onLoad: function (editor) {
+                editor.$blockScrolling = Infinity;
+                editor.getSession().setMode("ace/mode/"+mode);
+                editor.setTheme("ace/theme/sqlserver");
+                editor.setOptions({
+                    enableSnippets: true,
+                    enableBasicAutocompletion: true,
+                    enableLiveAutocompletion: true
+                });
+            }
+        }
     };
 
     vm.localStaticModelObject=vm.staticDataProvider.dataSchema;
