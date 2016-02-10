@@ -200,22 +200,54 @@ app.factory('StaticData', function() {
             },
             "lastName": {
                 "type": "string"
-            }
+            },
+            "gender": {
+                "type": "string",
+                "enum": [
+                    "Male",
+                    "Female",
+                    "Other"
+                ]
+            },
+            "active": {
+                "type": "boolean"
+            },
+            "dateOfBirth": {
+                "type": "string",
+                "format": "date-time"
+            },
         }
     };
     provider.uiSchema={
         "type": "VerticalLayout",
         "elements": [
             {
+                "type": "HorizontalLayout",
+                "elements": [
+                    {
+                        "type": "Control",
+                        "scope": {
+                            "$ref": "#/properties/firstName"
+                        }
+                    },
+                    {
+                        "type": "Control",
+                        "scope": {
+                            "$ref": "#/properties/lastName"
+                        }
+                    }
+                ]
+            },
+            {
                 "type": "Control",
                 "scope": {
-                    "$ref": "#/properties/firstName"
+                    "$ref": "#/properties/gender"
                 }
             },
             {
                 "type": "Control",
                 "scope": {
-                    "$ref": "#/properties/lastName"
+                    "$ref": "#/properties/dateOfBirth"
                 }
             }
         ]
