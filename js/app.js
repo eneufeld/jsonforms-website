@@ -20,7 +20,7 @@ angular.module('jsonforms-website', [
 })
 */
 .config(function($mdIconProvider) {
-    $mdIconProvider.defaultIconSet('/css/mdi.svg');
+    $mdIconProvider.defaultIconSet('./css/mdi.svg');
     $mdIconProvider.defaultViewBoxSize([152]);
 })
 .config(function($mdThemingProvider) {
