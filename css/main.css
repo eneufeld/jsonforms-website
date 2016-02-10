@@ -29,7 +29,7 @@
     padding-top: 80px;
 }
 .l-offset-docs-nav {
-    padding-left: 240px;
+    padding-left: 260px;
 }
 .l-pinned-left {
     position: fixed;
@@ -192,7 +192,7 @@ footer a:hover{
 }
 .docs-nav{
     background-color: #c5ccd3;
-    width: 240px;
+    width: 250px;
 }
 .docs-nav-header{
     background-color: #b6c0c8;
@@ -234,7 +234,7 @@ button.docs-nav-button{
 	display: none;
 }
 .docs-content{
-    max-width: 1200px:
+    max-width: 1450px;
     margin-right:20px;
 }
 pre {
