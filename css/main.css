@@ -236,6 +236,7 @@ button.docs-nav-button{
 .docs-content{
     max-width: 1450px;
     margin-right:20px;
+    line-height: 1.45;
 }
 pre {
     background-color: #F5F6F7;
