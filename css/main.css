@@ -64,6 +64,8 @@ button.main-nav-button{
 }
 .logo:hover{
     background-color: #005db0;
+    text-decoration: none;
+    color: #fff;
 }
 .innerlogo{
     padding-left: 110px;

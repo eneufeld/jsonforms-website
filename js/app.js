@@ -4,11 +4,11 @@ angular.module('jsonforms-website', [
     'ngMaterial',
     //'ngRoute',
     'ui.ace',
-    //'ui.bootstrap',
+    'ui.bootstrap',
     //'ui.validate',
     //'ui.grid',
     'jsonforms',
-    'jsonforms-material'
+    //'jsonforms-material'
 ])
 /*
 .config(function($mdThemingProvider) {
