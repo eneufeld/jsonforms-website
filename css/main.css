@@ -103,6 +103,8 @@ button.main-nav-button{
 }
 .primary-menu-link a:hover{
     background-color: #005db0;
+    text-decoration: none;
+    color: #fff;
 }
 #github{
     background-image: url("../images/extern/GitHub-Mark-Light-64px.png");
